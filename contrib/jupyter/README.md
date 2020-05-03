@@ -7,7 +7,7 @@ Please make requests for examples through the "Issues" mechanism.
 
 ## Examples
 
-Examples require STARE version >= 0.14.2 and pystare version > 0.3.6.
+Examples require STARE version >= 0.14.2 and pystare version > 0.3.8.
 
 ### [00-HelloEarth.ipynb](00-HelloEarth.ipynb)
 
@@ -29,6 +29,16 @@ denoted by their lower and upper bounds. STARE upper bounds are called
 terminators and are greater than any possible index value within the
 interval. Expanding intervals into and finding longitude-latitude
 information from index values is introduced.
+
+### [03-SpatialRange.ipynb](03-SpatialRange.ipynb)
+
+Nearly every analysis requires the ability to specify and work with
+regions of interest. The notion of a *cover* is introduced, which is a
+set of index values or intervals associated with an area covering a
+region of interest. Covers may be stored in spatial ranges which are
+sets of STARE spatial intervals stored as a skip-list for efficient
+querying. A simple pair of covers is constructed and their
+intersection is found using spatial ranges (srange).
 
 # Acknowledgments
 
