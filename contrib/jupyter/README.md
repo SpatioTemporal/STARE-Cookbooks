@@ -45,7 +45,9 @@ intersection is found using spatial ranges (srange).
 
 Examine pystare's cmp_spatial(a,b) which provides a *contains*
 function. The function forms an exterior product a.contains.b. The
-simplest usage is when either a or b is a single element array.
+simplest usage is when either a or b is a single element array. Also
+introduce the use of STARE index values as keys in a python
+dictionary.
 
 
 
