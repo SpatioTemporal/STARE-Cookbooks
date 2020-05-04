@@ -3,5 +3,5 @@ Examples of STARE usage
 
 ## [C++ Examples](contrib/c++)
 
-## [Jupyter Notebooks](contrib/jupiter)
+## [Jupyter Notebooks](contrib/jupyter)
 
