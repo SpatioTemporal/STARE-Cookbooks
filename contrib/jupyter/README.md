@@ -40,6 +40,15 @@ sets of STARE spatial intervals stored as a skip-list for efficient
 querying. A simple pair of covers is constructed and their
 intersection is found using spatial ranges (srange).
 
+
+### [04-Contains.ipynb](04-Contains.ipynb)
+
+Examine pystare's cmp_spatial(a,b) which provides a *contains*
+function. The function forms an exterior product a.contains.b. The
+simplest usage is when either a or b is a single element array.
+
+
+
 # Acknowledgments
 
 2018-2020 Development supported by NASA/ACCESS-17 Grant 80NSSC18M0118.
