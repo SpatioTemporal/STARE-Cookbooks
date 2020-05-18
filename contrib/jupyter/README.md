@@ -49,7 +49,7 @@ simplest usage is when either a or b is a single element array. Also
 introduce the use of STARE index values as keys in a python
 dictionary.
 
-### [05-HullsAndGrids.ipynb](05-HullsAndGrids)
+### [05-HullsAndGrids.ipynb](05-HullsAndGrids.ipynb)
 
 Show an example of convex_hull via from_polygon to index regions marked by a coastline.
 
