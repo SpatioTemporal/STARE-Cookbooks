@@ -51,7 +51,9 @@ dictionary.
 
 ### [05-HullsAndGrids.ipynb](05-HullsAndGrids.ipynb)
 
-Show an example of convex_hull via from_polygon to index regions marked by a coastline.
+Show examples of convex_hull and non-convex hulls via from_polygon to
+index regions marked by a coastline. The hulls bound covers which can
+be used for intersections and search queries.
 
 
 # Acknowledgments
