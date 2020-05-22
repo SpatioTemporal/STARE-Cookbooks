@@ -53,7 +53,8 @@ dictionary.
 
 Show examples of convex_hull and non-convex hulls via from_polygon to
 index regions marked by a coastline. The hulls bound covers which can
-be used for intersections and search queries.
+be used for intersections and search queries. Also show how readily
+STARE works with Geopandas by showing the non-convex hull of Canada.
 
 
 # Acknowledgments
