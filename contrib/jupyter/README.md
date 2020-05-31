@@ -56,6 +56,9 @@ index regions marked by a coastline. The hulls bound covers which can
 be used for intersections and search queries. Also show how readily
 STARE works with Geopandas by showing the non-convex hull of Canada.
 
+### [06-SanJoaquin.ipynb](06-SanJoaquin.ipynb)
+
+Use Geopandas to input & output the San Joaquin watershed.
 
 # Acknowledgments
 
