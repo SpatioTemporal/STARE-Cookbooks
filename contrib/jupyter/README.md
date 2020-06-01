@@ -7,7 +7,7 @@ Please make requests for examples through the "Issues" mechanism.
 
 ## Examples
 
-Examples require STARE version >= 0.14.2 and pystare version > 0.3.8.
+Examples require STARE version >= 0.15.5 and pystare version >= 0.5.3
 
 ### [00-HelloEarth.ipynb](00-HelloEarth.ipynb)
 
@@ -59,6 +59,11 @@ STARE works with Geopandas by showing the non-convex hull of Canada.
 ### [06-SanJoaquin.ipynb](06-SanJoaquin.ipynb)
 
 Use Geopandas to input & output the San Joaquin watershed.
+
+### [07-MODIS+Africa.ipynb](07-MODIS+Africa.ipynb)
+
+Use Geopandas and pyhdf to load data from a MODIS swath and overlay
+on Africa via STARE.
 
 # Acknowledgments
 
