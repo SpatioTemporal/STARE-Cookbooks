@@ -1,4 +1,8 @@
 .ipynb_checkpoints
+*.ipynb.invalid
 san_joaquin*
 stderr.out
+.secrets
+*.png
+*~
 
