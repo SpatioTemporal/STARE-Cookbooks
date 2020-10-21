@@ -6,3 +6,5 @@ stderr.out
 *.png
 *~
 Untitled.ipynb
+core.*
+
