@@ -1,0 +1,64 @@
+
+
+* 2020-1016-1234 conda configuration (updated 2020-1020-1335-37-UTC)
+
+conda install -y emacs
+conda install -y cmake make
+conda install -y gcc_linux-64 gxx_linux-64 gfortran_linux-64 swig
+conda install -y netCDF4 netcdf4 hdfeos2 hdfeos5
+# conda install -y awscli
+conda install -y boto3 botocore 
+conda install -y scipy numpy matplotlib cartopy geopandas
+conda install -y xarray
+conda install -y ffmpeg
+conda install -y h5py
+conda install -y p7zip
+conda install -y groff
+
+* 2020-1019-0950 STARE Stack
+
+
+** STARE
+cd ~/git
+git clone https://github.com/SpatioTemporal/STARE.git
+mkdir stare-build; cd stare-build
+cmake -DCMAKE_C_COMPILER=x86_64-conda_cos6-linux-gnu-gcc -DCMAKE_CXX_COMPILER=x86_64-conda_cos6-linux-gnu-g++ ../STARE
+
+
+** pystare
+export STARE_INCLUDE_DIR=~/git/STARE/include/
+export STARE_LIB_DIR=~/git/stare-build/src/
+CXX=x86_64-conda_cos6-linux-gnu-g++ CC=x86_64-conda_cos6-linux-gnu-gcc pip3 install git+git://github.com/SpatioTemporal/pystare.git
+
+# pip3 install git+git://github.com/SpatioTemporal/pystare.git
+
+
+** STAREPandas
+pip3 install git+git://github.com/SpatioTemporal/starepandas.git
+
+# pip3 install -e STAREPandas
+# or 
+# python -m setup install --record record.txt
+
+
+** STAREmaster
+
+# Not needed immediately
+cmake -DCMAKE_C_COMPILER=x86_64-conda_cos6-linux-gnu-gcc -DCMAKE_CXX_COMPILER=x86_64-conda_cos6-linux-gnu-g++ -DSTARE_INCLUDE_DIR=~/git/STARE/include/ -DSTARE_LIBRARY=~/git/stare-build/src/ ../STAREmaster
+
+
+** geodata
+cd ~/git
+git clone https://github.com/SpatioTemporal/GeoData.git
+cd GeoData
+python setup.py install
+
+
+** aws
+
+# Not needed immediately for worker nodes
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"; unzip awscliv2.zip
+ln -s /home/jovyan/opt/src/aws-cli/aws /home/jovyan/opt/local/bin/aws
+
+export PATH=/home/jovyan/opt/local/bin:${PATH}
+
