@@ -1,3 +1,4 @@
+dask_worker_space
 .ipynb_checkpoints
 *.ipynb.invalid
 san_joaquin*
