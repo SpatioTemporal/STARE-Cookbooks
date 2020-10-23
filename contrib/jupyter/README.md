@@ -65,6 +65,24 @@ Use Geopandas to input & output the San Joaquin watershed.
 Use Geopandas and pyhdf to load data from a MODIS swath and overlay
 on Africa via STARE.
 
+### [STARE-based Integrative Analysis Demonstration](2020-ACM-SIGSPATIAL20-STARE+Dask-Demo.ipynb)
+
+The new STAREPandas interface is a central component of a fairly
+complete example presenting the basics of how STARE spatial indexing
+can be used to harmonize data for integrative analysis. Various
+aspects of the common problem of searching for and subsetting Earth
+Science data in a region of interest are discussed.
+
+Of particular note is how little code an end-user must generate to
+achieve very interesting search and subsetting capabilities. Also
+demonstrated is one of the first uses of NASA's [Science Managed Cloud
+Environment](https://www.nccs.nasa.gov/systems/SMCE) to perform this
+processing in the cloud on Earth Science data (ESD) stored in the cloud,
+pointing the way towards scaling up to support both the variety and
+volume of ESD.
+
+Supporting code for Michael Rilee, Niklas Griessbaum, Kwo-Sen Kuo, James Frew, and Robert Wolfe. 2020. _STARE-based Integrative Analysis of Diverse Data Using Dask Parallel Programming Demo Paper_. In Proceedings of ACM SIGSPATIAL conference (SIGSPATIAL’20). ACM, New York, NY, USA, 4 pages. https://doi.org/10.1145/3397536.3422346
+
 # Acknowledgments
 
 2018-2020 Development supported by NASA/ACCESS-17 Grant 80NSSC18M0118.
