@@ -1,6 +1,11 @@
 
 * 2020-1016-1234 conda configuration (updated 2020-1020-1335-37-UTC)
 
+
+** If you can set conda-forge as a default
+
+conda config --add channels conda-forge
+
 conda create --name stare-1 --clone notebook
 
 conda install -y emacs
@@ -16,6 +21,29 @@ conda install -y h5py
 conda install -y p7zip
 conda install -y groff
 conda install -y unzip
+conda install -y sqlalchemy
+
+** On the container
+
+# conda install -y awscli
+
+conda install -c conda-forge -y emacs
+conda install -c conda-forge -y cmake make
+conda install -c conda-forge -y gcc_linux-64 gxx_linux-64 gfortran_linux-64 swig
+conda install -c conda-forge -y netCDF4 netcdf4 hdfeos2 hdfeos5
+conda install -c conda-forge -y boto3 botocore 
+conda install -c conda-forge -y scipy numpy matplotlib cartopy geopandas
+conda install -c conda-forge -y xarray
+conda install -c conda-forge -y ffmpeg
+conda install -c conda-forge -y h5py
+conda install -c conda-forge -y p7zip
+conda install -c conda-forge -y groff
+conda install -c conda-forge -y unzip
+
+conda install -c conda-forge -y git
+conda install -c conda-forge -y pip
+conda install -c conda-forge -y pyhdf
+conda install -c conda-forge -y sqlalchemy
 
 * 2020-1019-0950 STARE Stack
 
@@ -25,7 +53,9 @@ cd ~/git
 git clone https://github.com/SpatioTemporal/STARE.git
 mkdir stare-build; cd stare-build
 cmake -DCMAKE_C_COMPILER=x86_64-conda_cos6-linux-gnu-gcc -DCMAKE_CXX_COMPILER=x86_64-conda_cos6-linux-gnu-g++ ../STARE
+make
 
+Install items into ~/opt/local/...
 
 ** pystare
 export STARE_INCLUDE_DIR=~/git/STARE/include/
@@ -34,12 +64,13 @@ export STARE_LIB_DIR=~/git/stare-build/src/
 export STARE_INCLUDE_DIR=~/opt/local/include/STARE/
 export STARE_LIB_DIR=~/opt/local/lib/
 CXX=x86_64-conda_cos6-linux-gnu-g++ CC=x86_64-conda_cos6-linux-gnu-gcc pip3 install git+git://github.com/SpatioTemporal/pystare.git
+make
 
 # pip3 install git+git://github.com/SpatioTemporal/pystare.git
 
 
 ** STAREPandas
-pip3 install git+git://github.com/SpatioTemporal/starepandas.git
+CXX=x86_64-conda_cos6-linux-gnu-g++ CC=x86_64-conda_cos6-linux-gnu-gcc pip3 install git+git://github.com/SpatioTemporal/starepandas.git
 
 # pip3 install -e STAREPandas
 # or 
@@ -51,7 +82,9 @@ pip3 install git+git://github.com/SpatioTemporal/starepandas.git
 git clone https://github.com/SpatioTemporal/STAREmaster.git
 
 # Not needed immediately
-cmake -DCMAKE_C_COMPILER=x86_64-conda_cos6-linux-gnu-gcc -DCMAKE_CXX_COMPILER=x86_64-conda_cos6-linux-gnu-g++ -DSTARE_INCLUDE_DIR=~/git/STARE/include/ -DSTARE_LIBRARY=~/git/stare-build/src/ ../STAREmaster
+# cmake -DCMAKE_C_COMPILER=x86_64-conda_cos6-linux-gnu-gcc -DCMAKE_CXX_COMPILER=x86_64-conda_cos6-linux-gnu-g++ -DSTARE_INCLUDE_DIR=~/git/STARE/include/ -DSTARE_LIBRARY=~/git/stare-build/src/ ../STAREmaster
+
+cmake -DCMAKE_C_COMPILER=x86_64-conda_cos6-linux-gnu-gcc -DCMAKE_CXX_COMPILER=x86_64-conda_cos6-linux-gnu-g++ -DSTARE_INCLUDE_DIR=${STARE_INCLUDE_DIR} -DSTARE_LIBRARY=${STARE_LIB_DIR} ../STAREmaster
 
 
 ** geodata
@@ -68,4 +101,10 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 ln -s /home/jovyan/opt/src/aws-cli/aws /home/jovyan/opt/local/bin/aws
 
 export PATH=/home/jovyan/opt/local/bin:${PATH}
+export PATH=/home/dask/opt/local/bin:${PATH}
+
+
+
+* 2020-1026-1909-25-UTC Also check for sortedcontainers
+
 
