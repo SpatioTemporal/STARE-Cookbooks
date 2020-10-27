@@ -45,6 +45,11 @@ conda install -c conda-forge -y pip
 conda install -c conda-forge -y pyhdf
 conda install -c conda-forge -y sqlalchemy
 
+# 2020-1027 Forgotten:
+
+conda install tempfile
+
+
 * 2020-1019-0950 STARE Stack
 
 
