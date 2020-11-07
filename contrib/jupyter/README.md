@@ -7,7 +7,9 @@ Please make requests for examples through the "Issues" mechanism.
 
 ## Examples
 
-Examples require STARE version >= 0.15.5 and pystare version >= 0.5.3
+Examples require STARE version >= 0.16 and pystare version >= 0.5.3
+
+[Notes on installation can be found here.](A1-InstallationNotes.md)
 
 ### [00-HelloEarth.ipynb](00-HelloEarth.ipynb)
 
@@ -81,7 +83,15 @@ processing in the cloud on Earth Science data (ESD) stored in the cloud,
 pointing the way towards scaling up to support both the variety and
 volume of ESD.
 
-Supporting code for Michael Rilee, Niklas Griessbaum, Kwo-Sen Kuo, James Frew, and Robert Wolfe. 2020. _STARE-based Integrative Analysis of Diverse Data Using Dask Parallel Programming Demo Paper_. In Proceedings of ACM SIGSPATIAL conference (SIGSPATIAL’20). ACM, New York, NY, USA, 4 pages. https://doi.org/10.1145/3397536.3422346
+Supporting code for Michael Rilee, Niklas Griessbaum, Kwo-Sen Kuo,
+James Frew, and Robert Wolfe. 2020. _STARE-based Integrative Analysis
+of Diverse Data Using Dask Parallel Programming Demo Paper_. In
+Proceedings of ACM SIGSPATIAL conference (SIGSPATIAL’20). ACM, New
+York, NY, USA, 4 pages. https://doi.org/10.1145/3397536.3422346
+
+### [A1 Installation Notes](A1-InstallationNotes.md)
+
+A few notes that may be helpful for getting things running.
 
 # Acknowledgments
 
