@@ -5,6 +5,5 @@ stderr.out
 .secrets
 *.svg
 *.png
-
-
+*.nc
 
