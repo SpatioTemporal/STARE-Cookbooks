@@ -2,4 +2,9 @@ dask-worker-space
 .ipynb_checkpoints
 san_joaquin*
 stderr.out
+.secrets
+*.svg
+*.png
+
+
 
