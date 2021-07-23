@@ -6,4 +6,6 @@ stderr.out
 *.svg
 *.png
 *.nc
+*~
+
 
